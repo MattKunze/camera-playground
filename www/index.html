@@ -21,25 +21,120 @@
   <head>
     <meta charset="utf-8" />
     <meta name="format-detection" content="telephone=no" />
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
     <title>Camera Playground</title>
   </head>
   <body>
-    <div class="container">
-      <div class="jumbotron">
-        <div class="container">
-            <h1><i class="glyphicon glyphicon-camera"></i> Camera Playground</h1>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+          <i class="glyphicon glyphicon-camera"></i> Camera Playground
+        </a>
+      </div>
+    </nav>
 
-            <div class="results panel panel-default">
-              <div class="panel-heading"><strong>Results</strong></div>
-              <ul class="list-group">
-              </ul>
-            </div>
+    <div class="container">
+
+      <div class="panel panel-default">
+        <div class="panel-heading"><strong>Capture Interfaces</strong></div>
+        <table class="table">
+          <tr>
+            <th>Input Element</th>
+            <td>
+              <div class="btn-group">
+                <button type="button" class="capture-input btn btn-default">
+                  <i class="glyphicon glyphicon-camera"></i>
+                </button>
+                <button type="button" class="btn btn-disabled">No Options</button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th>Cordova</th>
+            <td>
+              <div class="btn-group">
+                <button type="button" class="capture-cordova btn btn-default">
+                  <i class="glyphicon glyphicon-camera"></i>
+                </button>
+
+                <div class="btn-group">
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    <span class="cordova-destination current">File URI</span>
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="select" href="#">Data URL</a></li>
+                    <li><a class="select" href="#">File URI</a></li>
+                    <li><a class="select" href="#">Local URI</a></li>
+                  </ul>
+                </div>
+
+                <div class="btn-group">
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    <span class="cordova-encoding current">JPEG</span>
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="select" href="#">JPEG</a></li>
+                    <li><a class="select" href="#">PNG</a></li>
+                  </ul>
+                </div>
+
+                <div class="btn-group">
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    <span class="cordova-direction current">Back</span>
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="select" href="#">Back</a></li>
+                    <li><a class="select" href="#">Front</a></li>
+                  </ul>
+                </div>
+
+              </div>
+            </td>
+          </tr>
+          <!--
+          <tr>
+            <th>GetUserMedia</th>
+            <td>
+              <div class="btn-group">
+                <button type="button" class="capture-getusermedia btn btn-default">
+                  <i class="glyphicon glyphicon-camera"></i>
+                </button>
+              </div>
+            </td>
+          </tr>
+          -->
+        </table>
+
+      </div>
+
+      <div class="results panel panel-success">
+        <div class="panel-heading"><strong>Results</strong></div>
+        <table class="table table-striped">
+          <tr>
+            <th>Data</th>
+            <th>Size</th>
+            <th>Content Type</th>
+            <th>&nbsp;</th>
+          </tr>
+        </table>
+        <div class="panel-body">
+          <img href="#"></img>
         </div>
       </div>
+
+      <div class="log panel panel-warning">
+        <div class="panel-heading"><strong>Log</strong></div>
+        <ul class="list-group">
+        </ul>
+      </div>
+
     </div>
+
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/lodash.js"></script>

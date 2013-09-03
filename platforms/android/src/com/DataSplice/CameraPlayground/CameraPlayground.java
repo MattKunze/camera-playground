@@ -17,7 +17,7 @@
        under the License.
  */
 
-package com.DataSplice.CameraPlayground;
+package com.datasplice.CameraPlayground;
 
 import android.os.Bundle;
 import org.apache.cordova.*;

@@ -1,0 +1,7 @@
+body {
+  padding-top: 70px;
+}
+
+div.results.panel img {
+  max-width: 100%;
+}
