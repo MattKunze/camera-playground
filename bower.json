@@ -1,0 +1,18 @@
+{
+  "name": "camera-playground",
+  "version": "0.0.0",
+  "main": "www/index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.0.0",
+    "backbone": "~1.0.0",
+    "lodash": "~1.3.1",
+    "jquery": "~2.0.3"
+  }
+}

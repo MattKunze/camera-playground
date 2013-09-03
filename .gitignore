@@ -1,3 +1,6 @@
 .cordova
+bower_components
+platforms/android/assets/www
 platforms/android/bin
 platforms/android/gen
+platforms/ios/www
