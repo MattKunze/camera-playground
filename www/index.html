@@ -29,88 +29,40 @@
   <body>
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="navbar-header">
-        <a class="navbar-brand" href="#">
-          <i class="glyphicon glyphicon-camera"></i> Camera Playground
-        </a>
+        <button type="button" class="navbar-toggle"
+            data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="#" class="capture-image">
+              <i class="glyphicon glyphicon-camera"></i>
+            </a>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="capture-type dropdown-toggle"
+                data-toggle="dropdown">
+              <span class="current">None</span>
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="select select-type" href="#">Input Element</a></li>
+              <li><a class="select select-type" href="#">Cordova</a></li>
+              <li><a class="select select-type" href="#">GetUserMedia</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="collapse navbar-collapse pull-right">
+        <ul class="nav navbar-nav">
+        </ul>
       </div>
     </nav>
 
     <div class="container">
-
-      <div class="panel panel-default">
-        <div class="panel-heading"><strong>Capture Interfaces</strong></div>
-        <table class="table">
-          <tr>
-            <th>Input Element</th>
-            <td>
-              <div class="btn-group">
-                <button type="button" class="capture-input btn btn-default">
-                  <i class="glyphicon glyphicon-camera"></i>
-                </button>
-                <button type="button" class="btn btn-disabled">No Options</button>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <th>Cordova</th>
-            <td>
-              <div class="btn-group">
-                <button type="button" class="capture-cordova btn btn-default">
-                  <i class="glyphicon glyphicon-camera"></i>
-                </button>
-
-                <div class="btn-group">
-                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                    <span class="cordova-destination current">File URI</span>
-                    <span class="caret"></span>
-                  </button>
-                  <ul class="dropdown-menu">
-                    <li><a class="select" href="#">Data URL</a></li>
-                    <li><a class="select" href="#">File URI</a></li>
-                    <li><a class="select" href="#">Local URI</a></li>
-                  </ul>
-                </div>
-
-                <div class="btn-group">
-                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                    <span class="cordova-encoding current">JPEG</span>
-                    <span class="caret"></span>
-                  </button>
-                  <ul class="dropdown-menu">
-                    <li><a class="select" href="#">JPEG</a></li>
-                    <li><a class="select" href="#">PNG</a></li>
-                  </ul>
-                </div>
-
-                <div class="btn-group">
-                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                    <span class="cordova-direction current">Back</span>
-                    <span class="caret"></span>
-                  </button>
-                  <ul class="dropdown-menu">
-                    <li><a class="select" href="#">Back</a></li>
-                    <li><a class="select" href="#">Front</a></li>
-                  </ul>
-                </div>
-
-              </div>
-            </td>
-          </tr>
-          <!--
-          <tr>
-            <th>GetUserMedia</th>
-            <td>
-              <div class="btn-group">
-                <button type="button" class="capture-getusermedia btn btn-default">
-                  <i class="glyphicon glyphicon-camera"></i>
-                </button>
-              </div>
-            </td>
-          </tr>
-          -->
-        </table>
-
-      </div>
 
       <div class="results panel panel-success">
         <div class="panel-heading"><strong>Results</strong></div>

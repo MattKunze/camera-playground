@@ -18,6 +18,14 @@
  */
 'use strict;'
 
+var sourceOptions = {
+  cordova: [
+    { key: 'destination', list: [ 'File URI', 'Data URL', 'Local URI' ] },
+    { key: 'encoding', list: [ 'JPEG', 'PNG' ] },
+    { key: 'direction', list: [ 'Back', 'Front' ] }
+  ]
+}
+
 var photos = [];
 var app = {
   // Application Constructor
@@ -32,9 +40,7 @@ var app = {
     var doc = $(document);
     doc.ready(this.onDocumentReady);
     doc.on('deviceready', this.onDeviceReady);
-    doc.on('click', '.capture-input', this.captureInput);
-    doc.on('click', '.capture-cordova', this.captureCordova);
-    doc.on('click', '.capture-getusermedia', this.captureGetUserMedia);
+    doc.on('click', '.capture-image', this.captureImage);
     doc.on('click', '.dropdown-menu .select', this.selectMenuItem);
     doc.on('click', '.select-photo', this.selectPhoto);
     doc.on('click', '.delete-photo', this.deletePhoto);
@@ -53,8 +59,22 @@ var app = {
   onDeviceReady: function() {
     app.log('Received event', 'deviceready');
   },
+  captureImage: function(ev) {
+    var type = app.getCaptureType();
+    if(type === 'inputElement') {
+      app.captureInput(ev);
+    }
+    else if(type === 'cordova') {
+      app.captureCordova(ev);
+    }
+    else if(type === 'getUserMedia') {
+      app.captureGetUserMedia(ev);
+    }
+
+    return false;
+  },
   captureInput: function(ev) {
-    var target = $(ev.target).closest('tr');
+    var target = $(ev.target).closest('.navbar-header');
     target.find('input[type=file]').remove();
     var input = $('<input class="hidden" type="file" accept="image/*;capture=camera">');
     input
@@ -71,7 +91,6 @@ var app = {
       })
       .click();
   },
-
   captureCordova: function(ev) {
     try {
       var options = {}
@@ -108,16 +127,51 @@ var app = {
   cordovaError: function(message) {
     app.log('Cordova Error', message);
   },
-
   captureGetUserMedia: function(ev) {
     console.warn('capture getusermedia')
   },
   selectMenuItem: function(ev) {
     var target = $(ev.target);
-    target.closest('.btn-group').find('span.current').text(target.text());
+    target.closest('.dropdown').find('span.current').text(target.text());
+
+    if(target.hasClass('select-type')) {
+      app.updateSourceOptions();
+    }
+  },
+  getCaptureType: function() {
+    var type = $('.capture-type span.current').text().replace(/ /g, '');
+    return type[0].toLowerCase() + type.substring(1);
   },
   getOption: function(selector) {
     return $(selector).text().toUpperCase().replace(/ /g, '_');
+  },
+  updateSourceOptions: function() {
+    var type = app.getCaptureType();
+
+    var menu = $('.navbar-collapse .navbar-nav');
+    menu.empty();
+
+    var options = sourceOptions[type];
+    if(options) {
+      var template = '<li class="dropdown">' +
+        '<a href="#" class="<%= name %>" dropdown-toggle" data-toggle="dropdown">' +
+        '<span class="current"><%= current %></span>' +
+        '<span class="caret"></span></a>' +
+        '<ul class="dropdown-menu">' +
+        '<% _.forEach(list, function(val) { %><li><a class="select" href="#"><%= val %></a></li><% }); %>'
+        '</ul>';
+
+      for(var index = 0; index < options.length; index++) {
+        var item = options[index];
+
+        var t = _.template(template, {
+          name: type + '-' + item.key,
+          current: item.list[0],
+          list: item.list
+        });
+        menu.append(t);
+      }
+    }
   },
   addPhoto: function(data, options) {
     try {

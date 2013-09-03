@@ -1,7 +1,15 @@
 body {
   padding-top: 70px;
 }
-
+.navbar-toggle {
+  z-index: 1000;
+}
+ul.navbar-nav {
+  margin-left: 0;
+}
+ul.navbar-nav > li {
+  display: inline-block;
+}
 div.results.panel img {
   max-width: 100%;
 }
