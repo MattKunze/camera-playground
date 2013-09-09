@@ -40,6 +40,7 @@ var app = {
     var doc = $(document);
     doc.ready(this.onDocumentReady);
     doc.on('deviceready', this.onDeviceReady);
+    doc.on('click', '.capture-scanner', this.captureScanner);
     doc.on('click', '.capture-image', this.captureImage);
     doc.on('click', '.dropdown-menu .select', this.selectMenuItem);
     doc.on('click', '.select-photo', this.selectPhoto);
@@ -58,6 +59,25 @@ var app = {
   },
   onDeviceReady: function() {
     app.log('Received event', 'deviceready');
+  },
+  captureScanner: function(ev) {
+    try {
+      app.log('Cordova', cordova.plugins);
+      var scanner = cordova.require("cordova/plugin/BarcodeScanner");
+      app.log('Created scanner', scanner);
+
+      scanner.scan(
+        function (result) {
+          app.log('Scanner success', JSON.stringify(result));
+        },
+        function (error) {
+          app.log('Scanner error', error);
+        }
+      );
+    }
+    catch (error) {
+      app.log('Scanner Exception', error.message || error);
+    }
   },
   captureImage: function(ev) {
     var type = app.getCaptureType();
