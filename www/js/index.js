@@ -162,12 +162,13 @@ var app = {
       app.log('Created scanner', scanner);
       // scanner.trigger();
 
-      if(!this._captuvo) {
-        this._captuvo = true;
-        scanner.register(function(results) {
-          app.log('Captuvo results', JSON.stringify(result));
-        });
+      if(!cordova._captuvoCallback) {
+        cordova._captuvoCallback = function(results) {
+          app.log('Captuvo results', JSON.stringify(results));
+        }
+        scanner.registerCallback("cordova._captuvoCallback");
       }
+      app.log('Callback', cordova._captuvoCallback);
     }
     catch (error) {
       app.log('Scanner Exception', error.message || error);
