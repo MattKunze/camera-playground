@@ -26,6 +26,9 @@
     <feature name="BarcodeScanner">
         <param name="ios-package" value="CDVBarcodeScanner" />
     </feature>
+    <feature name="HoneywellScanner">
+        <param name="ios-package" value="CDVHoneywellScanner" />
+    </feature>
     <access origin="*" />
     <preference name="KeyboardDisplayRequiresUserAction" value="true" />
     <preference name="SuppressesIncrementalRendering" value="false" />

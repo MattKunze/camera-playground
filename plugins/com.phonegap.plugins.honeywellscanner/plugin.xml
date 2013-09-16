@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="com.phonegap.plugins.honeywellscanner"
+    version="1.0.0">
+
+    <name>HoneywellScanner</name>
+
+    <description>Provides access to Honeywell Captuvo bar code scanner</description>
+
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+
+    <asset src="www/honeywell.js" target="honeywell.js" />
+
+    <!-- ios -->
+    <platform name="ios">
+        <!-- Cordova >= 2.8 -->
+        <config-file target="config.xml" parent="/*">
+            <feature name="HoneywellScanner">
+                <param name="ios-package" value="CDVHoneywellScanner" />
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/Honeywell/Captuvo.h" />
+        <source-file src="src/ios/Honeywell/libCaptuvoSDK.a" framework="true" />
+        <source-file src="src/ios/CDVHoneywellScanner.mm" />
+
+        <framework src="ExternalAccessory.framework" />
+    </platform>
+
+</plugin>

@@ -160,7 +160,14 @@ var app = {
     try {
       var scanner = cordova.require("cordova/plugin/HoneywellScanner");
       app.log('Created scanner', scanner);
-      scanner.trigger();
+      // scanner.trigger();
+
+      if(!this._captuvo) {
+        this._captuvo = true;
+        scanner.register(function(results) {
+          app.log('Captuvo results', JSON.stringify(result));
+        });
+      }
     }
     catch (error) {
       app.log('Scanner Exception', error.message || error);

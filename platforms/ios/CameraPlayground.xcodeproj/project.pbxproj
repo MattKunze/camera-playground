@@ -54,6 +54,10 @@
 		7A6F3EFF94784E82B9BA2A3E /* scannerOverlay.xib in Resources */ = {isa = PBXBuildFile; fileRef = 210D3BD1E0D640CE92568C6B /* scannerOverlay.xib */; };
 		934A1A7638F14961A2F07B18 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 14E17373850A40A5975FC7F6 /* libiconv.dylib */; };
 		76EC4A8A83994AF2816C60C3 /* CoreVideo.framework in Resources */ = {isa = PBXBuildFile; fileRef = C4C25750287140F7BEF693E8 /* CoreVideo.framework */; };
+		80D6902644CF4EE6AD9F9FAF /* libCaptuvoSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B6AD843464D3454F94145493 /* libCaptuvoSDK.a */; };
+		73132C54201E40D5ACEB8030 /* libCaptuvoSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30F0AF1CE4C54D4F930941AE /* libCaptuvoSDK.a */; };
+		F0CE4911760F4DB488AD57E8 /* CDVHoneywellScanner.mm in Resources */ = {isa = PBXBuildFile; fileRef = 7CF2818DAD58444AB9419581 /* CDVHoneywellScanner.mm */; };
+		E597C4A85BD64FF0A8B8834B /* ExternalAccessory.framework in Resources */ = {isa = PBXBuildFile; fileRef = C473F7090F25495085239471 /* ExternalAccessory.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +140,11 @@
 		210D3BD1E0D640CE92568C6B /* scannerOverlay.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "scannerOverlay.xib"; path = "scannerOverlay.xib"; sourceTree = "<group>"; fileEncoding = 4; };
 		14E17373850A40A5975FC7F6 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libiconv.dylib"; path = "usr/lib/libiconv.dylib"; sourceTree = SDKROOT; fileEncoding = 4; };
 		C4C25750287140F7BEF693E8 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "CoreVideo.framework"; path = "System/Library/Frameworks/CoreVideo.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
+		B6AD843464D3454F94145493 /* libCaptuvoSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libCaptuvoSDK.a"; path = "com.phonegap.plugins.honeywellscanner/libCaptuvoSDK.a"; sourceTree = "<group>"; fileEncoding = 4; };
+		30F0AF1CE4C54D4F930941AE /* libCaptuvoSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libCaptuvoSDK.a"; path = "CameraPlayground/Plugins/com.phonegap.plugins.honeywellscanner/libCaptuvoSDK.a"; sourceTree = "<group>"; fileEncoding = 4; };
+		7CF2818DAD58444AB9419581 /* CDVHoneywellScanner.mm */ = {isa = PBXFileReference; lastKnownFileType = unknown; name = "CDVHoneywellScanner.mm"; path = "com.phonegap.plugins.honeywellscanner/CDVHoneywellScanner.mm"; sourceTree = "<group>"; fileEncoding = 4; };
+		4FDA437A941C40C8A0DCC0FD /* Captuvo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Captuvo.h"; path = "com.phonegap.plugins.honeywellscanner/Captuvo.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		C473F7090F25495085239471 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "ExternalAccessory.framework"; path = "System/Library/Frameworks/ExternalAccessory.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +172,8 @@
 				30E5649213A7FCAF007403D8 /* CoreMedia.framework in Frameworks */,
 				934A1A7638F14961A2F07B18 /* libiconv.dylib in Frameworks */,
 				76EC4A8A83994AF2816C60C3 /* CoreVideo.framework in Resources */,
+				73132C54201E40D5ACEB8030 /* libCaptuvoSDK.a in Frameworks */,
+				E597C4A85BD64FF0A8B8834B /* ExternalAccessory.framework in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +282,8 @@
 				30E5649113A7FCAF007403D8 /* CoreMedia.framework */,
 				14E17373850A40A5975FC7F6 /* libiconv.dylib */,
 				C4C25750287140F7BEF693E8 /* CoreVideo.framework */,
+				30F0AF1CE4C54D4F930941AE /* libCaptuvoSDK.a */,
+				C473F7090F25495085239471 /* ExternalAccessory.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -300,6 +313,9 @@
 				8B03ACDFE9EC4C9D8AE4C193 /* CDVBarcodeScanner.mm */,
 				1E596B4CCCC84C27A02A7959 /* zxing-all-in-one.cpp */,
 				7E4E6E15731A4621A709FAB3 /* zxing-all-in-one.h */,
+				B6AD843464D3454F94145493 /* libCaptuvoSDK.a */,
+				7CF2818DAD58444AB9419581 /* CDVHoneywellScanner.mm */,
+				4FDA437A941C40C8A0DCC0FD /* Captuvo.h */,
 			);
 			name = Plugins;
 			path = CameraPlayground/Plugins;
@@ -475,6 +491,8 @@
 				E3D05D047F094DFCABCDEA52 /* CDVLogger.m in Sources */,
 				A9FA59F1AF9F4B74B3D1CED0 /* CDVBarcodeScanner.mm in Resources */,
 				30EC32F8713F4278B8F1779E /* zxing-all-in-one.cpp in Resources */,
+				80D6902644CF4EE6AD9F9FAF /* libCaptuvoSDK.a in Frameworks */,
+				F0CE4911760F4DB488AD57E8 /* CDVHoneywellScanner.mm in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,6 +572,10 @@
 				);
 				PRODUCT_NAME = CameraPlayground;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/CameraPlayground/Plugins/com.phonegap.plugins.honeywellscanner\"",
+				);
 			};
 			name = Debug;
 		};
@@ -585,6 +607,10 @@
 				);
 				PRODUCT_NAME = CameraPlayground;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/CameraPlayground/Plugins/com.phonegap.plugins.honeywellscanner\"",
+				);
 			};
 			name = Release;
 		};

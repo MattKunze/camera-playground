@@ -50,6 +50,14 @@
       <string>UIInterfaceOrientationLandscapeLeft</string>
       <string>UIInterfaceOrientationLandscapeRight</string>
     </array>
+    <key>supported </key>
+    <string></string>
+    <key>UISupportedExternalAccessoryProtocols</key>
+    <array>
+      <string>com.honeywell.scansled.protocol.decoder</string>
+      <string>com.honeywell.scansled.protocol.msr</string>
+      <string>com.honeywell.scansled.protocol.pm</string>
+    </array>
     <key>UISupportedInterfaceOrientations~ipad</key>
     <array>
       <string>UIInterfaceOrientationPortrait</string>
