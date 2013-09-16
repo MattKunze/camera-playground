@@ -60,25 +60,6 @@ var app = {
   onDeviceReady: function() {
     app.log('Received event', 'deviceready');
   },
-  captureScanner: function(ev) {
-    try {
-      app.log('Cordova', cordova.plugins);
-      var scanner = cordova.require("cordova/plugin/BarcodeScanner");
-      app.log('Created scanner', scanner);
-
-      scanner.scan(
-        function (result) {
-          app.log('Scanner success', JSON.stringify(result));
-        },
-        function (error) {
-          app.log('Scanner error', error);
-        }
-      );
-    }
-    catch (error) {
-      app.log('Scanner Exception', error.message || error);
-    }
-  },
   captureImage: function(ev) {
     var type = app.getCaptureType();
     if(type === 'inputElement') {
@@ -89,6 +70,12 @@ var app = {
     }
     else if(type === 'getUserMedia') {
       app.captureGetUserMedia(ev);
+    }
+    else if(type === 'zXing') {
+      app.captureZXing(ev);
+    }
+    else if(type === 'captuvo') {
+      app.captureCaptuvo(ev);
     }
 
     return false;
@@ -149,6 +136,28 @@ var app = {
   },
   captureGetUserMedia: function(ev) {
     console.warn('capture getusermedia')
+  },
+  captureZXing: function(ev) {
+    try {
+      app.log('Cordova', cordova.plugins);
+      var scanner = cordova.require("cordova/plugin/BarcodeScanner");
+      app.log('Created scanner', scanner);
+
+      scanner.scan(
+        function (result) {
+          app.log('Scanner success', JSON.stringify(result));
+        },
+        function (error) {
+          app.log('Scanner error', error);
+        }
+      );
+    }
+    catch (error) {
+      app.log('Scanner Exception', error.message || error);
+    }
+  },
+  captureCaptuvo: function(ev) {
+    app.log('Captuvo!', cordova.plugins);
   },
   selectMenuItem: function(ev) {
     var target = $(ev.target);
