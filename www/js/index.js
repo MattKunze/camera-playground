@@ -157,7 +157,14 @@ var app = {
     }
   },
   captureCaptuvo: function(ev) {
-    app.log('Captuvo!', cordova.plugins);
+    try {
+      var scanner = cordova.require("cordova/plugin/HoneywellScanner");
+      app.log('Created scanner', scanner);
+      scanner.trigger();
+    }
+    catch (error) {
+      app.log('Scanner Exception', error.message || error);
+    }
   },
   selectMenuItem: function(ev) {
     var target = $(ev.target);
