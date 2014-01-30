@@ -22,7 +22,7 @@ package com.datasplice.CameraPlayground;
 import android.os.Bundle;
 import org.apache.cordova.*;
 
-public class CameraPlayground extends DroidGap
+public class CameraPlayground extends CordovaActivity
 {
     @Override
     public void onCreate(Bundle savedInstanceState)

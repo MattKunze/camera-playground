@@ -6,7 +6,6 @@
 	objectVersion = 46;
 	objects = {
 /* Begin PBXBuildFile section */
-		1150B13A18EE49BB902CAAA1 /* CDVCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F81CB61053492CAD14A635 /* CDVCamera.m */; };
 		1D3623260D0F684500981E51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -41,9 +40,7 @@
 		30E5649213A7FCAF007403D8 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E5649113A7FCAF007403D8 /* CoreMedia.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		30FC414916E50CA1004E6F35 /* icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30FC414816E50CA1004E6F35 /* icon-72@2x.png */; };
 		32D7520217B8420389E0B632 /* CDVFile.m in Sources */ = {isa = PBXBuildFile; fileRef = F314AC4281B642738107BE93 /* CDVFile.m */; };
-		45AE6142E12D4812B8ECEAC1 /* CDVJpegHeaderWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = EED08AEB079E4B43916F6933 /* CDVJpegHeaderWriter.m */; };
 		5AA0E66D1729F45B000DC89A /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AA0E66C1729F45B000DC89A /* OpenAL.framework */; };
-		5AA0E66F1729F460000DC89A /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AA0E66E1729F460000DC89A /* ImageIO.framework */; };
 		5B1594DD16A7569C00FEF299 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */; };
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
 		E3D05D047F094DFCABCDEA52 /* CDVLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF4B8D617B944EEAE897BB5 /* CDVLogger.m */; };
@@ -58,6 +55,8 @@
 		73132C54201E40D5ACEB8030 /* libCaptuvoSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30F0AF1CE4C54D4F930941AE /* libCaptuvoSDK.a */; };
 		F0CE4911760F4DB488AD57E8 /* CDVHoneywellScanner.mm in Resources */ = {isa = PBXBuildFile; fileRef = 7CF2818DAD58444AB9419581 /* CDVHoneywellScanner.mm */; };
 		E597C4A85BD64FF0A8B8834B /* ExternalAccessory.framework in Resources */ = {isa = PBXBuildFile; fileRef = C473F7090F25495085239471 /* ExternalAccessory.framework */; };
+		1BE0F1DE73B24436A0804432 /* CDVCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 64426DB8F65A4B2C8831BE98 /* CDVCamera.m */; };
+		411BB66ADA1F4E3EB7A381CD /* CDVJpegHeaderWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B8D00BD6C9B4DB8AFAF8432 /* CDVJpegHeaderWriter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,6 +144,11 @@
 		7CF2818DAD58444AB9419581 /* CDVHoneywellScanner.mm */ = {isa = PBXFileReference; lastKnownFileType = unknown; name = "CDVHoneywellScanner.mm"; path = "com.phonegap.plugins.honeywellscanner/CDVHoneywellScanner.mm"; sourceTree = "<group>"; fileEncoding = 4; };
 		4FDA437A941C40C8A0DCC0FD /* Captuvo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Captuvo.h"; path = "com.phonegap.plugins.honeywellscanner/Captuvo.h"; sourceTree = "<group>"; fileEncoding = 4; };
 		C473F7090F25495085239471 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "ExternalAccessory.framework"; path = "System/Library/Frameworks/ExternalAccessory.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
+		64426DB8F65A4B2C8831BE98 /* CDVCamera.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVCamera.m"; path = "org.apache.cordova.camera/CDVCamera.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		0B8D00BD6C9B4DB8AFAF8432 /* CDVJpegHeaderWriter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVJpegHeaderWriter.m"; path = "org.apache.cordova.camera/CDVJpegHeaderWriter.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		0D05D4D1975B4F19A2427AF4 /* CDVCamera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVCamera.h"; path = "org.apache.cordova.camera/CDVCamera.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		EEE8FB06B8784722B7D8F7DA /* CDVJpegHeaderWriter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVJpegHeaderWriter.h"; path = "org.apache.cordova.camera/CDVJpegHeaderWriter.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		D391CA09831C4E759959D275 /* CDVExif.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVExif.h"; path = "org.apache.cordova.camera/CDVExif.h"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,7 +157,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				301BF5BF109A6A2B0062928A /* CoreLocation.framework in Frameworks */,
-				5AA0E66F1729F460000DC89A /* ImageIO.framework in Frameworks */,
 				5AA0E66D1729F45B000DC89A /* OpenAL.framework in Frameworks */,
 				5B1594DD16A7569C00FEF299 /* AssetsLibrary.framework in Frameworks */,
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
@@ -316,6 +319,11 @@
 				B6AD843464D3454F94145493 /* libCaptuvoSDK.a */,
 				7CF2818DAD58444AB9419581 /* CDVHoneywellScanner.mm */,
 				4FDA437A941C40C8A0DCC0FD /* Captuvo.h */,
+				64426DB8F65A4B2C8831BE98 /* CDVCamera.m */,
+				0B8D00BD6C9B4DB8AFAF8432 /* CDVJpegHeaderWriter.m */,
+				0D05D4D1975B4F19A2427AF4 /* CDVCamera.h */,
+				EEE8FB06B8784722B7D8F7DA /* CDVJpegHeaderWriter.h */,
+				D391CA09831C4E759959D275 /* CDVExif.h */,
 			);
 			name = Plugins;
 			path = CameraPlayground/Plugins;
@@ -484,8 +492,6 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
-				1150B13A18EE49BB902CAAA1 /* CDVCamera.m in Sources */,
-				45AE6142E12D4812B8ECEAC1 /* CDVJpegHeaderWriter.m in Sources */,
 				32D7520217B8420389E0B632 /* CDVFile.m in Sources */,
 				E89E2FB68E5844EDB2EB7982 /* CDVFileTransfer.m in Sources */,
 				E3D05D047F094DFCABCDEA52 /* CDVLogger.m in Sources */,
@@ -493,6 +499,8 @@
 				30EC32F8713F4278B8F1779E /* zxing-all-in-one.cpp in Resources */,
 				80D6902644CF4EE6AD9F9FAF /* libCaptuvoSDK.a in Frameworks */,
 				F0CE4911760F4DB488AD57E8 /* CDVHoneywellScanner.mm in Resources */,
+				1BE0F1DE73B24436A0804432 /* CDVCamera.m in Sources */,
+				411BB66ADA1F4E3EB7A381CD /* CDVJpegHeaderWriter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
